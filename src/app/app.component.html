@@ -1,0 +1,44 @@
+<router-outlet></router-outlet>
+<!-- <app-diretiva-ngif></app-diretiva-ngif> -->
+
+<!-- <app-diretiva-ng-switch></app-diretiva-ng-switch> -->
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#" [class.active]="aba == 'home'" (click)="aba='home'">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" [class.active]="aba == 'ngif'" (click)="aba='ngif'">ngif</a>
+        </li>        
+        <li class="nav-item">
+            <a class="nav-link" href="#" [class.active]="aba == 'ngSwitch'" (click)="aba='ngSwitch'">ngSwitch</a>
+        </li>   
+        <li class="nav-item">
+            <a class="nav-link" href="#" [class.active]="aba == 'ngFor'" (click)="aba='ngFor'">ngFor</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#" [class.active]="aba == 'ngClass'" (click)="aba='ngClass'">ngClass</a>
+      </li>       
+      </ul>      
+    </div>
+  </nav>  
+
+  <div class="container" [ngSwitch]="aba">      
+    <p *ngSwitchCase="'ngif'"><app-diretiva-ngif></app-diretiva-ngif></p>
+    <p *ngSwitchCase="'ngFor'"><app-diretiva-ngfor></app-diretiva-ngfor></p>   
+    <p *ngSwitchCase="'ngSwitch'"><app-diretiva-ng-switch></app-diretiva-ng-switch></p> 
+    <p *ngSwitchCase="'ngClass'"><app-diretiva-ngclass></app-diretiva-ngclass></p>      
+    <p *ngSwitchDefault>Home</p>
+    
+  </div>
