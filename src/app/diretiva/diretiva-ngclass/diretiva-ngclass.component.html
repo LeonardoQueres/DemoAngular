@@ -1,3 +1,5 @@
 <h1>
-    <fa-icon [icon]="faCoffee"></fa-icon>
+    <div (click)="onClick()" class="fa fa-star"
+        [ngClass]="{ 'fa fa-star':!meuFavorito, 'fa fa-star-half':menuFavorito }"></div>
 </h1>
+<button (click)="onClick()">clique-me</button>

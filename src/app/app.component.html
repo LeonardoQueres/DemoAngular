@@ -29,7 +29,19 @@
         </li> 
         <li class="nav-item">
           <a class="nav-link" href="#" [class.active]="aba == 'ngClass'" (click)="aba='ngClass'">ngClass</a>
-      </li>       
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link" href="#" [class.active]="aba == 'ngStyle'" (click)="aba='ngStyle'">ngStyle</a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link" href="#" [class.active]="aba == 'operElvis'" (click)="aba='operElvis'">Operador Elvis</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#" [class.active]="aba == 'ngContent'" (click)="aba='ngContent'">ng Content</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" [class.active]="aba == 'diretivaCust'" (click)="aba='diretivaCust'">Diretivas Customizadas</a>
+          </li>         
       </ul>      
     </div>
   </nav>  
@@ -38,7 +50,14 @@
     <p *ngSwitchCase="'ngif'"><app-diretiva-ngif></app-diretiva-ngif></p>
     <p *ngSwitchCase="'ngFor'"><app-diretiva-ngfor></app-diretiva-ngfor></p>   
     <p *ngSwitchCase="'ngSwitch'"><app-diretiva-ng-switch></app-diretiva-ng-switch></p> 
-    <p *ngSwitchCase="'ngClass'"><app-diretiva-ngclass></app-diretiva-ngclass></p>      
-    <p *ngSwitchDefault>Home</p>
-    
+    <p *ngSwitchCase="'ngClass'"><app-diretiva-ngclass></app-diretiva-ngclass></p> 
+    <p *ngSwitchCase="'ngStyle'"><app-diretiva-ngstyle></app-diretiva-ngstyle></p>  
+    <p *ngSwitchCase="'operElvis'"><app-elvis></app-elvis></p>   
+    <p *ngSwitchCase="'ngContent'">
+      <app-exemplo-ng-context>      
+        <div class="titulo">Titulo do painel</div>
+        <div class="corpo">Corpo do painel</div>
+      </app-exemplo-ng-context>      
+    </p>
+    <p *ngSwitchDefault><app-diretiva-customizada></app-diretiva-customizada></p>
   </div>

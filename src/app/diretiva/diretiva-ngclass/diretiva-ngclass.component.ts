@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-
-
 @Component({
   selector: 'app-diretiva-ngclass',
   templateUrl: './diretiva-ngclass.component.html',
@@ -10,11 +7,15 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class DiretivaNgclassComponent implements OnInit {
 
-  faCoffee = faCoffee;
-
+  meuFavorito: boolean = false;
+ 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onClick() {
+    this.meuFavorito = !this.meuFavorito;
+    console.log(this.meuFavorito);
+  }
 }
