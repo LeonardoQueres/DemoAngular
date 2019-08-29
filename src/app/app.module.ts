@@ -8,11 +8,9 @@ import { DiretivaModule } from './diretiva/diretiva.module';
 import { OperadorModule } from './operador/operador.module';
 import { NgContentModule } from './ng-content/ng-content.module';
 
-
 @NgModule({
   declarations: [
     AppComponent
-    
   ],
   imports: [
     BrowserModule,

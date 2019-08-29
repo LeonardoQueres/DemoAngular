@@ -6,3 +6,26 @@
 
 
 <p [Highlight]="'red'" [defaultColor]="'grey'">Texto com highLight com cores customizadas.</p>
+
+<p>Diretiva ngElse</p>
+
+<div *ngIf="mostrarCursos; then thenBlock else elseBlock"></div>
+
+<ng-template #thenBlock>
+    Lista de Cursos aqui.
+</ng-template>
+
+<ng-template #elseBlock>
+    Não existem cursos para serem listados.
+</ng-template>
+<br />
+
+<button (click)="onMostrarCursos()">Mostrar ou Esconder Cursos.</button>
+
+<!-- <ng-template [ngElse]="mostrarCursos">
+    <div>
+        Não existem cursos para serem listados.
+    </div>
+</ng-template> -->
+
+ 
